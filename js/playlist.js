@@ -8,12 +8,12 @@ Playlist.prototype.add = function(song) {
 };
 
 Playlist.prototype.play = function() {
-    let currentSong = this.songs[this.nowPlayingIndex];
+    const currentSong = this.songs[this.nowPlayingIndex];
     currentSong.play();
 };
 
 Playlist.prototype.stop = function(){
-    let currentSong = this.songs[this.nowPlayingIndex];
+    const currentSong = this.songs[this.nowPlayingIndex];
     currentSong.stop();
 };
 
@@ -28,7 +28,7 @@ Playlist.prototype.next = function() {
 
 Playlist.prototype.renderInElement = function(list) {
     list.innerHTML = "";
-    for( var i = 0; i< this.songs.length; i++) {
+    for( let i = 0; i < this.songs.length; i++) {
         list.innerHTML += this.songs[i].toHTML();
     }
 };

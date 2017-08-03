@@ -5,7 +5,6 @@ function Movie(title, year, duration) {
 Movie.prototype = Object.create(Media.prototype);
 
 Movie.prototype.toHTML = function() {
-    console.log(this.title);
-    var htmlString = `<li class="${this.isPlaying ? "current": ""}">${this.title} (${this.year}) <span class="duration">${this.duration}</span></li>`;
+    const htmlString = `<li class="${this.isPlaying ? "current": ""}">${this.title} (${this.year}) <span class="duration">${this.duration}</span></li>`;
     return htmlString;
 };
